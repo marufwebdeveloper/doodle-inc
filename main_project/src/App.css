@@ -1,0 +1,107 @@
+ul{
+  list-style: none ;
+}
+ul li{
+  margin: 10px 0;
+}
+ul .cat-name:hover{
+  font-weight: bold;
+}
+ul{
+  background: rgba(0, 0, 0, 0.6);
+}
+.cat-name{
+  width: calc(100% - 35px);
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    
+}
+.cat-name::before{
+  content: "\2794";
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 5px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  text-align: center;
+  line-height: 24px;
+  transition: ease-in-out 0.1s;
+}
+
+.show-sub-cat::before{
+transform: rotate(90deg);
+transition: ease-in-out 0.1s;
+}
+
+ul li{
+  color: white;
+}
+.add-button{
+    cursor: pointer;
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin: 0;
+    height: 20px;
+    line-height: 16px;
+    width: 20px;
+    text-align: center;
+    background: #666;
+}
+.add-button:hover{
+  background: white;
+  color: black;
+}
+.category ul{
+  overflow: hidden;
+  -webkit-transition: 0.7s ease-in-out;
+  -moz-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+} 
+
+
+
+
+.fade-in {
+ animation-name: fadeIn;
+  animation-duration: 0.6s;
+
+}
+
+@keyframes fadeIn {
+  0% {
+        height: 0;
+        opacity: 0;
+        transform: translateY(startYposition);
+    } 
+    100% {
+        height: auto;
+        opacity: 1;
+        transform: translateY(endYposition);
+    }
+}
+
+
+.fade-out {
+  display: none;
+}
+.selected-list{
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  cursor: default;
+}
+.remove-list{
+  padding: 0 5px;
+    position: absolute;
+    top: -6px;
+    right: -1px;
+    color: #faffa8;
+    cursor: pointer;
+}
+.remove-list:hover{
+  font-weight: bold;
+}
